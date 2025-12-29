@@ -1,27 +1,52 @@
-import 'package:equatable/equatable.dart';
-import '../../domain/entities/app_user.dart';
+// import 'package:equatable/equatable.dart';
+// import '../../domain/entities/app_user.dart';
 
-abstract class AuthState extends Equatable {
+// abstract class AuthState extends Equatable {
+//   @override
+//   List<Object?> get props => [];
+// }
+
+// class AuthInitial extends AuthState {}
+
+// class AuthLoading extends AuthState {}
+
+// class OtpSent extends AuthState {
+//   final String email;
+//   OtpSent(this.email);
+// }
+
+// class Authenticated extends AuthState {
+//   final AppUser user;
+//   Authenticated(this.user);
+// }
+
+
+// class AuthError extends AuthState {
+//   final String message;
+//   AuthError(this.message);
+
+//   @override
+//   List<Object?> get props => [message];
+// }
+
+
+import 'package:equatable/equatable.dart';
+
+abstract class AuthBlocState extends Equatable {
   @override
   List<Object?> get props => [];
 }
 
-class AuthInitial extends AuthState {}
+class AuthInitial extends AuthBlocState {}
 
-class AuthLoading extends AuthState {}
+class AuthLoading extends AuthBlocState {}
 
-class OtpSent extends AuthState {
-  final String email;
-  OtpSent(this.email);
-}
+class MagicLinkSent extends AuthBlocState {}
+class Authenticated extends AuthBlocState {}
 
-class Authenticated extends AuthState {
-  final AppUser user;
-  Authenticated(this.user);
-}
+class Unauthenticated extends AuthBlocState {}
 
-
-class AuthError extends AuthState {
+class AuthError extends AuthBlocState {
   final String message;
   AuthError(this.message);
 

@@ -200,19 +200,19 @@ void configureDependencies() {
     () => AuthRepositoryImpl(getIt<AuthRemoteDataSource>()),
   );
 
-  getIt.registerLazySingleton<SendOtp>(
-    () => SendOtp(getIt<AuthRepository>()),
-  );
+  // getIt.registerLazySingleton<SendOtp>(
+  //   () => SendOtp(getIt<AuthRepository>()),
+  // );
 
-  getIt.registerLazySingleton<VerifyOtp>(
-    () => VerifyOtp(getIt<AuthRepository>()),
-  );
+  // getIt.registerLazySingleton<VerifyOtp>(
+  //   () => VerifyOtp(getIt<AuthRepository>()),
+  // );
 
   getIt.registerFactory<AuthBloc>(
     () => AuthBloc(
-      sendOtp: getIt<SendOtp>(),
-      verifyOtp: getIt<VerifyOtp>(),
-    ),
+        // sendOtp: getIt<SendOtp>(),
+        // verifyOtp: getIt<VerifyOtp>(),
+        ),
   );
 
   // =======================

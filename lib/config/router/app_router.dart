@@ -133,15 +133,15 @@ class AppRouter {
         ),
       ),
 
-      GoRoute(
-        path: RoutePaths.otp,
-        builder: (context, state) => BlocProvider<AuthBloc>(
-          create: (_) => getIt<AuthBloc>(),
-          child: OtpPage(
-            email: state.extra as String,
-          ),
-        ),
-      ),
+      // GoRoute(
+      //   path: RoutePaths.otp,
+      //   builder: (context, state) => BlocProvider<AuthBloc>(
+      //     create: (_) => getIt<AuthBloc>(),
+      //     child: OtpPage(
+      //       email: state.extra as String,
+      //     ),
+      //   ),
+      // ),
 
       GoRoute(
         path: RoutePaths.location,

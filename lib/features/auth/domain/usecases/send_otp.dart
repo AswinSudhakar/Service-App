@@ -1,11 +1,11 @@
-import 'package:hyperlocal_booking_app/features/auth/domain/repositories/auth_repository.dart';
+// import 'package:hyperlocal_booking_app/features/auth/domain/repositories/auth_repository.dart';
 
-class SendOtp {
-  final AuthRepository repository;
+// class SendOtp {
+//   final AuthRepository repository;
 
-  SendOtp(this.repository);
+//   SendOtp(this.repository);
 
-  Future<void> call(String email) {
-    return repository.sendOtp(email);
-  }
-}
+//   Future<void> call(String email) {
+//     return repository.sendOtp(email);
+//   }
+// }
